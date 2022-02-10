@@ -5,11 +5,14 @@ metadata:
 spec:
   serviceAccountName: pipeline
   triggers:
-    - name: liberty-pipeline-trigger
-      bindings:
-        - name: liberty-pipeline-binding
-      template:
-        name: liberty-pipeline-template
+  - name: liberty-pipeline-trigger
+    bindings:
+    - apiversion: v1alpha1
+      kind: TriggerBinding
+      ref: liberty-pipeline-binding
+    template:
+      ref: liberty-pipeline-template
+
 ---
 
 apiVersion: triggers.tekton.dev/v1alpha1
