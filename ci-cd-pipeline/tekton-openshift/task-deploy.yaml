@@ -31,7 +31,7 @@ spec:
             oc get dc $(inputs.params.APP_NAME) -n $(inputs.params.DEPLOY_PROJECT)
             if [[ $? -ne 0 ]]
             then
-                oc new-app -i $(inputs.params.DEPLOY_PROJECT)/$(inputs.params.APP_NAME):$(inputs.params.APP_VERSION) -n $(inputs.params.DEPLOY_PROJECT)
+                oc new-app --as-deployment-config -i $(inputs.params.DEPLOY_PROJECT)/$(inputs.params.APP_NAME):$(inputs.params.APP_VERSION) -n $(inputs.params.DEPLOY_PROJECT)
             else
                 echo "Application already exists. Deploying version=$(inputs.params.APP_VERSION)"
             fi
