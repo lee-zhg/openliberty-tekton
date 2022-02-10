@@ -42,7 +42,7 @@ spec:
     - apiVersion: tekton.dev/v1alpha1
       kind: PipelineRun
       metadata:
-        name: liberty-pipeline-run-$(params.gitrevision)
+        name: liberty-pipeline-run-$(tt.params.gitrevision)
       spec:
         serviceAccountName: pipeline
         pipelineRef:
