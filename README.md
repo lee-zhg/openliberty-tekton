@@ -302,6 +302,8 @@ oc get route -n env-ci
 
 Finally, the new `PipelineRun` will be triggered automatically and visible in the pipelines console `ci-env` project.
 
+For example, http://el-liberty-pipeline-listener-env-ci.itzroks-1000003bw1-ggnnmq-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud
+
 
 ### For Kubernetes:
 
