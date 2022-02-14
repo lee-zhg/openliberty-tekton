@@ -159,7 +159,7 @@ oc create -f ci-cd-pipeline/tekton-openshift/pipeline.yaml         -n env-ci
 ```
 tkn t ls -n env-ci
 tkn p ls -n env-ci
-tkn p start openliberty-pipeline -n env-ci
+tkn p start liberty-pipeline -n env-ci
 ```
 
 ![Pipeline Run](images/pipeline.jpg?raw=true "Pipeline Run") 
